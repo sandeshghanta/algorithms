@@ -13,7 +13,7 @@ int main(){
 	int ans[n];
 	ans[0] = 1;
 	for (i=1;i<n;i++){
-		max = -1;
+		max = 1;
 		for (j=0;j<i;j++){
 			if (data[i] > data[j] && ans[j] + 1> max){
 				max = ans[j] + 1;
