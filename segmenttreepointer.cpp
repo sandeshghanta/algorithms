@@ -39,6 +39,14 @@ void updateindex(node* temp,int index,int change){
 	else{
 		updateindex(temp->left,index,change);
 	}
+	ll tmp = 0;
+	if (temp->right){
+		tmp += temp->right->value;
+	}
+	if (temp->left){
+		tmp += temp->left->value;
+	}
+	temp->value = tmp;
 }
 void updaterange(node* temp,int l,int r,int change){
 	if (!temp){
