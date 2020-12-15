@@ -1,16 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Node{
+class Node{			//Defining a node
 	public:
 		int data;
 		Node* next;
 		Node* prev;
-		Node(){
+		Node(){		//Constructor
 			data = 0;
 			next = NULL;
 			prev = NULL;
 		}
-		Node(int x){
+		Node(int x){	//Constructor
 			data = x;
 			next = NULL;
 			prev = NULL;
@@ -32,7 +32,7 @@ class List{
 			temp->next = newnode;
 			newnode->prev = temp;
 		}
-		void print(){
+		void print(){			//Function to print the doubly linked list
 			Node* temp = head;
 			while (temp != NULL){
 				cout << temp->data << " ";
@@ -67,7 +67,7 @@ class List{
 				temp = temp->next;	
 			}
 		}
-		int getsize(){
+		int getsize(){			//Method to find the size of the doubly linked list
 			Node* temp = head;
 			int size = 0;
 			while (temp != NULL){
@@ -76,7 +76,7 @@ class List{
 			}
 			return size;
 		}
-		void append_at_head(int data){
+		void append_at_head(int data){		//Adding a node at the beginning of the doubly Linked List
 			Node* newnode = new Node(data);
 			if (head == NULL){
 				head = newnode;
@@ -88,9 +88,9 @@ class List{
 			}
 		}
 };
-int main(){
-	List l;
-	l.append(100);
+int main(){		
+	List l;		//Defining an object l of class List	
+	l.append(100);		//Adding nodes
 	l.append(100);
 	l.append(100);
 	l.append(100);
